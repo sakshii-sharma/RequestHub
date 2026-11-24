@@ -1,0 +1,53 @@
+---
+description: RequestHub project development and learning rules
+alwaysApply: true
+---
+
+# RequestHub – Project Development Rules
+
+This project is an Enterprise Service Request & Workflow Management System.
+
+## Technology Stack
+
+- Backend: C#, ASP.NET Core Web API
+- Frontend: Angular, TypeScript
+- Database: SQL Server
+- ORM: Entity Framework Core
+- Authentication: JWT
+- Testing: xUnit
+
+## Development Guidelines
+
+1. Follow a clean, maintainable and appropriate layered architecture.
+2. Follow SOLID principles and separation of concerns.
+3. Use dependency injection properly.
+4. Implement secure authentication and role-based authorization.
+5. Use DTOs, proper validation and centralized exception handling.
+6. Follow REST API conventions.
+7. Use EF Core and LINQ efficiently.
+8. Write asynchronous code where appropriate.
+9. Use meaningful naming conventions.
+10. Avoid unnecessary abstractions and overengineering.
+11. Never introduce technologies or packages without explaining why they are needed.
+
+## Learning Guidelines
+
+1. Explain important concepts in simple English before implementation.
+2. Explain why a particular implementation or architectural decision is needed.
+3. Explain how the request flows through the application.
+4. Use actual RequestHub code examples to explain technical concepts.
+5. After completing each module, provide relevant interview questions and answers.
+6. Help me understand the code rather than blindly generating it.
+
+## Development Workflow
+
+1. Work module by module.
+2. Inspect existing code before making changes.
+3. Explain the implementation plan before making significant changes.
+4. Do not generate the entire application at once.
+5. Do not introduce unrelated changes.
+6. Ensure the application builds and existing functionality remains intact.
+7. Write meaningful unit tests for important business logic.
+8. Update project documentation when appropriate.
+
+My primary objective is to build a working enterprise application while becoming confident in .NET Full Stack technical interviews.
