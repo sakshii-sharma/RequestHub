@@ -17,6 +17,6 @@ namespace RequestHub.Domain.Entities
 
         // Time Related Properties
         public DateTime CreatedAt { get; set; }
-        public DateTime UploadedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

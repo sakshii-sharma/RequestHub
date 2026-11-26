@@ -8,7 +8,7 @@ namespace RequestHub.Domain.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public int slaHours { get; set; }
+        public int SlaHours { get; set; }
         public bool IsActive { get; set; } = true;
         public bool RequiresApproval { get; set; } = false;
 

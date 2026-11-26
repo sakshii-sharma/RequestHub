@@ -11,13 +11,13 @@ namespace RequestHub.Domain.Entities
         public string Email { get; set; } = string.Empty;
         public string PasswordHash { get; set; } = string.Empty;
         public bool IsActive { get; set; } = true;
-        public int FailedLogInCount { get; set; }
+        public int FailedLoginCount { get; set; }
 
 
         // Time Related Properties
         public DateTime? LockoutEnd { get; set; }
-        public DateTime? CreatedAt { get; set; }
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
 
         // Department of User

@@ -13,7 +13,7 @@ namespace RequestHub.Domain.Entities
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public Priority Priority { get; set; }
-        public RequestStatus RequestStatus { get; set; }
+        public RequestStatus Status { get; set; }
 
 
         // RowVersion for Concurrency Control 
@@ -23,7 +23,7 @@ namespace RequestHub.Domain.Entities
 
         // Time Related Properties
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdateAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public DateTime? DueAt { get; set; }
         public DateTime? ClosedAt { get; set; }
 

@@ -9,6 +9,6 @@ namespace RequestHub.Domain.Entities
     {
         public int Id { get; set; }
         public AppRole Name { get; set; }
-        public ICollection<User> Users = new List<User>();
+        public ICollection<User> Users { get; set; } = new List<User>();
     }
 }
