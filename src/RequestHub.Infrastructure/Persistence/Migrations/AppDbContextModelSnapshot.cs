@@ -165,6 +165,32 @@ namespace RequestHub.Infrastructure.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("AuditableEntities", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsEnabled = true,
+                            Name = "ServiceRequest",
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsEnabled = true,
+                            Name = "User",
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsEnabled = true,
+                            Name = "Category",
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("RequestHub.Domain.Entities.AuditableField", b =>
@@ -231,6 +257,52 @@ namespace RequestHub.Infrastructure.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("Categories", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DepartmentId = 1,
+                            IsActive = true,
+                            Name = "Laptop request",
+                            RequiresApproval = false,
+                            SlaHours = 48,
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DepartmentId = 1,
+                            IsActive = true,
+                            Name = "Access request",
+                            RequiresApproval = true,
+                            SlaHours = 24,
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DepartmentId = 2,
+                            IsActive = true,
+                            Name = "Onboarding",
+                            RequiresApproval = true,
+                            SlaHours = 72,
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DepartmentId = 4,
+                            IsActive = true,
+                            Name = "Desk repair",
+                            RequiresApproval = false,
+                            SlaHours = 48,
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("RequestHub.Domain.Entities.Department", b =>
@@ -261,6 +333,40 @@ namespace RequestHub.Infrastructure.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("Departments", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Information Technology",
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Human Resources",
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Finance",
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            IsActive = true,
+                            Name = "Facilities",
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("RequestHub.Domain.Entities.RefreshToken", b =>
@@ -356,6 +462,28 @@ namespace RequestHub.Infrastructure.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("Roles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = 4
+                        });
                 });
 
             modelBuilder.Entity("RequestHub.Domain.Entities.ServiceRequest", b =>
@@ -513,6 +641,20 @@ namespace RequestHub.Infrastructure.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("Users", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc),
+                            DepartmentId = 1,
+                            Email = "admin@requesthub.local",
+                            FailedLoginCount = 0,
+                            FullName = "System Admin",
+                            IsActive = true,
+                            PasswordHash = "temporary-hash-replaced-on-day-2",
+                            UpdatedAt = new DateTime(2026, 11, 27, 0, 0, 0, 0, DateTimeKind.Utc)
+                        });
                 });
 
             modelBuilder.Entity("RoleUser", b =>
@@ -528,6 +670,13 @@ namespace RequestHub.Infrastructure.Persistence.Migrations
                     b.HasIndex("UsersId");
 
                     b.ToTable("UserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            RolesId = 4,
+                            UsersId = 1
+                        });
                 });
 
             modelBuilder.Entity("RequestHub.Domain.Entities.Attachment", b =>

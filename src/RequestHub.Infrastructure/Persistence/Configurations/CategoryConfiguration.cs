@@ -30,6 +30,15 @@ namespace RequestHub.Infrastructure.Persistence.Configurations
                    .HasForeignKey(c => c.DepartmentId)
                    .OnDelete(DeleteBehavior.Restrict);
 
+
+            // seed data for categories
+            builder.HasData(
+                new Category { Id = 1, Name = "Laptop request", SlaHours = 48, IsActive = true, RequiresApproval = false, DepartmentId = 1, CreatedAt = SeedData.CreatedAt, UpdatedAt = SeedData.CreatedAt, Department = null!, ServiceRequests = null! },
+                new Category { Id = 2, Name = "Access request", SlaHours = 24, IsActive = true, RequiresApproval = true, DepartmentId = 1, CreatedAt = SeedData.CreatedAt, UpdatedAt = SeedData.CreatedAt, Department = null!, ServiceRequests = null! },
+                new Category { Id = 3, Name = "Onboarding", SlaHours = 72, IsActive = true, RequiresApproval = true, DepartmentId = 2, CreatedAt = SeedData.CreatedAt, UpdatedAt = SeedData.CreatedAt, Department = null!, ServiceRequests = null! },
+                new Category { Id = 4, Name = "Desk repair", SlaHours = 48, IsActive = true, RequiresApproval = false, DepartmentId = 4, CreatedAt = SeedData.CreatedAt, UpdatedAt = SeedData.CreatedAt, Department = null!, ServiceRequests = null! }
+            );
+
         }
     }
 }
